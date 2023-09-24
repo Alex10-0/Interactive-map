@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://daq3v5sp5m0wn"]
+
+[ext_resource type="Texture2D" uid="uid://crmrm2nui34si" path="res://images/FakeShit-export.png" id="1_p7vgy"]
+[ext_resource type="Script" path="res://scenes/Camera2D.gd" id="2_l14ax"]
+[ext_resource type="Script" path="res://Scripts/Buttons/Back.gd" id="3_5h7ud"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="FakeShit-export" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_p7vgy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_l14ax")
+
+[node name="Control" type="Control" parent="Camera2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer2" type="MarginContainer" parent="Camera2D/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -14.271
+anchor_top = 8.117
+anchor_right = -14.271
+anchor_bottom = 8.117
+offset_left = 15.457
+offset_top = -50.64
+offset_right = 206.457
+offset_bottom = -19.64
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/Control/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="Camera2D/Control/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+script = ExtResource("3_5h7ud")
