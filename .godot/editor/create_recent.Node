@@ -1,7 +1,8 @@
+RichTextLabel
+VBoxContainer
+MarginContainer
+NinePatchRect
 Control
 Camera2D
 Button
-MarginContainer
-RichTextLabel
 Sprite2D
-VBoxContainer

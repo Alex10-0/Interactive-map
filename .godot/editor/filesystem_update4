@@ -1,1 +1,7 @@
+res://infoscreen.tscn
 res://scenes/mainmenu.tscn
+res://scenes/credits.tscn
+res://scenes/map.tscn
+res://scenes/infoscreen.tscn
+res://scenes/infoscreen.gd
+res://scenes/Camera2D.gd

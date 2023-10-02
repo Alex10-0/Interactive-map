@@ -1,15 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://daq3v5sp5m0wn"]
+[gd_scene load_steps=5 format=3 uid="uid://daq3v5sp5m0wn"]
 
-[ext_resource type="Texture2D" uid="uid://crmrm2nui34si" path="res://images/FakeShit-export.png" id="1_p7vgy"]
+[ext_resource type="Texture2D" uid="uid://c8oo1e1b3ojnb" path="res://images/FakeShit.png" id="1_xit1h"]
 [ext_resource type="Script" path="res://scenes/Camera2D.gd" id="2_l14ax"]
 [ext_resource type="Script" path="res://Scripts/Buttons/Back.gd" id="3_5h7ud"]
+[ext_resource type="PackedScene" uid="uid://ddfvhntkkvmrk" path="res://scenes/infoscreen.tscn" id="4_xjmc8"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="FakeShit-export" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_p7vgy")
+position = Vector2(250.5, -339.5)
+scale = Vector2(2.71167, 2.71167)
+texture = ExtResource("1_xit1h")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("2_l14ax")
@@ -42,3 +44,14 @@ metadata/_edit_lock_ = true
 layout_mode = 2
 text = "Back"
 script = ExtResource("3_5h7ud")
+
+[node name="Control2" parent="Camera2D" instance=ExtResource("4_xjmc8")]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -324.0
+offset_right = -575.0
+offset_bottom = -324.0
+grow_horizontal = 0
