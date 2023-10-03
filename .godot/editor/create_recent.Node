@@ -1,8 +1,10 @@
-RichTextLabel
+Button
 VBoxContainer
+CanvasLayer
+CanvasGroup
+RichTextLabel
 MarginContainer
 NinePatchRect
 Control
 Camera2D
-Button
 Sprite2D
