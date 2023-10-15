@@ -16,6 +16,6 @@ func _unhandled_input(event: InputEvent):
 			_moveCamera = true;
 		else:
 			_moveCamera = false;
-	if event is InputEventMouseMotion and _moveCamera:
+	if event is InputEventMouseMotion and _moveCamera == true:
 		position += (_previousPosition - event.position);
 		_previousPosition = event.position;

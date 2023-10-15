@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddfvhntkkvmrk"]
+[gd_scene load_steps=8 format=3 uid="uid://ddfvhntkkvmrk"]
 
 [ext_resource type="Script" path="res://scenes/infoscreen.gd" id="1_mp88q"]
 [ext_resource type="Texture2D" uid="uid://bcvmulc35vs6t" path="res://images/menu.png" id="1_qkuyl"]
 [ext_resource type="Texture2D" uid="uid://gd42n7q1dto1" path="res://images/test.png" id="1_s1bng"]
+[ext_resource type="FontFile" uid="uid://c408u3xjkxfuh" path="res://sources/fonts/dos/BlockZone.ttf" id="4_x4xk4"]
 [ext_resource type="Texture2D" uid="uid://dmvkmc1jvxgi" path="res://images/campus/gates.jpg" id="5_iuvp6"]
-[ext_resource type="FontFile" uid="uid://mt81q5eklb4i" path="res://sources/fonts/CourierPrime-Regular.ttf" id="5_uwifm"]
+[ext_resource type="Script" path="res://scenes/panelBackButton.gd" id="5_xy8yp"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fke2e"]
 
@@ -37,28 +38,50 @@ patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
 
-[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect"]
+[node name="description" type="RichTextLabel" parent="NinePatchRect"]
 layout_mode = 0
-offset_left = 15.0
-offset_top = 21.0
-offset_right = 487.0
-offset_bottom = 75.0
-theme_override_fonts/normal_font = ExtResource("5_uwifm")
-theme_override_font_sizes/normal_font_size = 40
-bbcode_enabled = true
-text = "[center]gaming"
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="NinePatchRect"]
-layout_mode = 0
-offset_left = 45.0
-offset_top = 89.0
-offset_right = 461.0
-offset_bottom = 461.0
-theme_override_fonts/normal_font = ExtResource("5_uwifm")
+offset_left = 33.0
+offset_top = 143.0
+offset_right = 525.0
+offset_bottom = 352.0
+theme_override_fonts/normal_font = ExtResource("4_x4xk4")
 theme_override_font_sizes/normal_font_size = 32
-text = "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "
+bbcode_enabled = true
+text = "[center]Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "
+
+[node name="name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 63.0
+offset_right = 527.0
+offset_bottom = 121.0
+theme_override_fonts/normal_font = ExtResource("4_x4xk4")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]Lorem Ipsum"
+
+[node name="MarginContainer2" type="MarginContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = -47.0
+offset_right = 904.0
+offset_bottom = -16.0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="NinePatchRect/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+script = ExtResource("5_xy8yp")
 
 [node name="campusImage" type="Sprite2D" parent="."]
-position = Vector2(245, 28)
-scale = Vector2(0.096564, 0.0815359)
+position = Vector2(279, 0)
+scale = Vector2(0.0800185, 0.0675653)
 texture = ExtResource("5_iuvp6")

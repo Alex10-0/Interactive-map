@@ -1,18 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://daq3v5sp5m0wn"]
+[gd_scene load_steps=9 format=3 uid="uid://daq3v5sp5m0wn"]
 
 [ext_resource type="Texture2D" uid="uid://c8oo1e1b3ojnb" path="res://images/FakeShit.png" id="1_xit1h"]
 [ext_resource type="Script" path="res://scenes/Camera2D.gd" id="2_l14ax"]
-[ext_resource type="Script" path="res://scenes/testing.gd" id="2_vifk4"]
 [ext_resource type="Script" path="res://Scripts/Buttons/Back.gd" id="3_5h7ud"]
 [ext_resource type="PackedScene" uid="uid://ddfvhntkkvmrk" path="res://scenes/infoscreen.tscn" id="4_xjmc8"]
+[ext_resource type="Script" path="res://scenes/Node2D.gd" id="5_gw8ij"]
+[ext_resource type="Texture2D" uid="uid://bcvmulc35vs6t" path="res://images/menu.png" id="5_l75np"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jf8pc"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vxcj"]
+size = Vector2(163, 108)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pq1mk"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o4ids"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4felc"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqvuy"]
+size = Vector2(235, 131)
 
 [node name="Node2D" type="Node2D"]
 
@@ -21,17 +20,7 @@ texture_filter = 1
 position = Vector2(250.5, -339.5)
 scale = Vector2(2.71167, 2.71167)
 texture = ExtResource("1_xit1h")
-
-[node name="Button" type="Button" parent="FakeShit-export"]
-offset_left = -170.0
-offset_top = 207.0
-offset_right = -114.0
-offset_bottom = 245.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_jf8pc")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_pq1mk")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_o4ids")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4felc")
-script = ExtResource("2_vifk4")
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("2_l14ax")
@@ -73,3 +62,90 @@ grow_vertical = 2
 
 [node name="Control2" parent="CanvasLayer/VBoxContainer" instance=ExtResource("4_xjmc8")]
 layout_mode = 2
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="gates" type="Node2D" parent="Node2D2"]
+script = ExtResource("5_gw8ij")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="Node2D2/gates"]
+position = Vector2(-135, 278)
+metadata/_edit_lock_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/gates/Area2D"]
+offset_left = -81.0
+offset_top = -56.0
+offset_right = 82.0
+offset_bottom = 52.0
+texture = ExtResource("5_l75np")
+draw_center = false
+region_rect = Rect2(0, 0, 50, 50)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 6
+patch_margin_bottom = 5
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/gates/Area2D"]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_3vxcj")
+metadata/_edit_lock_ = true
+
+[node name="entrance" type="Node2D" parent="Node2D2"]
+script = ExtResource("5_gw8ij")
+
+[node name="Area2D" type="Area2D" parent="Node2D2/entrance"]
+position = Vector2(-139, 410)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/entrance/Area2D"]
+offset_left = -118.0
+offset_top = -66.0
+offset_right = 119.0
+offset_bottom = 67.0
+texture = ExtResource("5_l75np")
+draw_center = false
+region_rect = Rect2(0, 0, 50, 50)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/entrance/Area2D"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_qqvuy")
+metadata/_edit_lock_ = true
+
+[node name="reception" type="Node2D" parent="Node2D2"]
+position = Vector2(56, -176)
+script = ExtResource("5_gw8ij")
+
+[node name="Area2D" type="Area2D" parent="Node2D2/reception"]
+position = Vector2(-135, 278)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/reception/Area2D"]
+offset_left = -81.0
+offset_top = -56.0
+offset_right = 82.0
+offset_bottom = 52.0
+texture = ExtResource("5_l75np")
+draw_center = false
+region_rect = Rect2(0, 0, 50, 50)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 6
+patch_margin_bottom = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/reception/Area2D"]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_3vxcj")
+
+[connection signal="mouse_entered" from="Node2D2/gates/Area2D" to="Node2D2/gates" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D2/gates/Area2D" to="Node2D2/gates" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D2/entrance/Area2D" to="Node2D2/entrance" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D2/entrance/Area2D" to="Node2D2/entrance" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D2/reception/Area2D" to="Node2D2/reception" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D2/reception/Area2D" to="Node2D2/reception" method="_on_area_2d_mouse_exited"]

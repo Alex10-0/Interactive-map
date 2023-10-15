@@ -2,5 +2,7 @@ res://scenes/mainmenu.tscn
 res://scenes/credits.tscn
 res://scenes/map.tscn
 res://scenes/infoscreen.tscn
-res://scenes/testing.gd
-res://sources/stylebox/test.tres
+res://scenes/Node2D.gd
+res://Scripts/Buttons/Back.gd
+res://scenes/panelBackButton.gd
+res://scenes/infoscreen.gd

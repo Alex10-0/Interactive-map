@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d28t8el8xfspt"]
 
-[ext_resource type="FontFile" uid="uid://mt81q5eklb4i" path="res://sources/fonts/CourierPrime-Regular.ttf" id="1_g855x"]
 [ext_resource type="Script" path="res://Scripts/Buttons/CreditsButton.gd" id="1_hqdqb"]
+[ext_resource type="FontFile" uid="uid://c408u3xjkxfuh" path="res://sources/fonts/dos/BlockZone.ttf" id="1_xnxhg"]
 [ext_resource type="Script" path="res://scenes/Start.gd" id="3_qihfn"]
 
 [node name="Main Menu" type="Control"]
@@ -23,9 +23,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -207.0
-offset_top = -88.0
+offset_top = -76.0
 offset_right = -16.0
-offset_bottom = -16.0
+offset_bottom = -4.0
 grow_horizontal = 0
 grow_vertical = 0
 
@@ -36,12 +36,14 @@ metadata/_edit_lock_ = true
 
 [node name="Credits" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_xnxhg")
 text = "Credits"
 script = ExtResource("1_hqdqb")
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Credits2" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "my balls"
+theme_override_fonts/font = ExtResource("1_xnxhg")
+text = "Balls"
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -59,7 +61,7 @@ grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2"]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("1_g855x")
+theme_override_fonts/normal_font = ExtResource("1_xnxhg")
 theme_override_font_sizes/normal_font_size = 39
 bbcode_enabled = true
 text = "wWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWAAAA"
@@ -72,5 +74,6 @@ theme_override_constants/separation = 10
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("1_xnxhg")
 text = "ENTER NOW WAAHHHH"
 script = ExtResource("3_qihfn")
