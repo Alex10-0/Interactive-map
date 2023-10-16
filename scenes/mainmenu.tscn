@@ -100,7 +100,7 @@ var scrollBck : int
 var lastFrame : float
 var lastMouseMove : float
 var lastScrollF : float
-var lastScrollB : float
+var pieceOfShitVariableDontWork : float
 
 func _process(delta):
 	

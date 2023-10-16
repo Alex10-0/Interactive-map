@@ -26,7 +26,7 @@ func _process(delta):
 			description.bbcode_text = "The gates leading to the inside of the college, a landyard is required to do so, if your landyard is lost or forgotten for the day a temporary one is available at the reception."
 			placeName.bbcode_text = "Gates"
 		infoCentre:
-			description.bbcode_text = "balls"
+			description.bbcode_text = "balls :>"
 			placeName.bbcode_text = "Gates"
 		reception:
 			description.bbcode_text = "The reception of BSDC, here you can ask questions to the receptioners and they will attempt to guide you accordingly."
