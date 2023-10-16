@@ -3,7 +3,8 @@ extends Control
 var entrance = preload("res://images/campus/entrance.jpg")
 var gates = preload("res://images/campus/gates.jpg")
 var reception = preload("res://images/campus/reception.jpg")
-var infoCentre = preload("res://images/campus/infoCentre.jpg")
+var infoCentre = preload("res://images/a.png")
+var secret = preload("res://images/a.png")
 var state = 0
 var selectedImage = entrance
 @onready var image = get_node("campusImage")

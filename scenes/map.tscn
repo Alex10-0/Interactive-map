@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://daq3v5sp5m0wn"]
+[gd_scene load_steps=10 format=3 uid="uid://daq3v5sp5m0wn"]
 
 [ext_resource type="Texture2D" uid="uid://c8oo1e1b3ojnb" path="res://images/FakeShit.png" id="1_xit1h"]
 [ext_resource type="Script" path="res://scenes/Camera2D.gd" id="2_l14ax"]
 [ext_resource type="Script" path="res://Scripts/Buttons/Back.gd" id="3_5h7ud"]
+[ext_resource type="FontFile" uid="uid://c408u3xjkxfuh" path="res://sources/fonts/dos/BlockZone.ttf" id="3_r8lhh"]
 [ext_resource type="PackedScene" uid="uid://ddfvhntkkvmrk" path="res://scenes/infoscreen.tscn" id="4_xjmc8"]
 [ext_resource type="Script" path="res://scenes/Node2D.gd" id="5_gw8ij"]
 [ext_resource type="Texture2D" uid="uid://bcvmulc35vs6t" path="res://images/menu.png" id="5_l75np"]
@@ -31,10 +32,10 @@ script = ExtResource("2_l14ax")
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 13.0
-offset_top = -47.0
-offset_right = 204.0
-offset_bottom = -16.0
+offset_left = 9.0
+offset_top = -36.0
+offset_right = 200.0
+offset_bottom = -5.0
 grow_vertical = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer2"]
@@ -44,6 +45,7 @@ metadata/_edit_lock_ = true
 
 [node name="Button" type="Button" parent="CanvasLayer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_r8lhh")
 text = "Back"
 script = ExtResource("3_5h7ud")
 

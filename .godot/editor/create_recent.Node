@@ -1,3 +1,4 @@
+MarginContainer
 AnimationPlayer
 AnimatedSprite2D
 NinePatchRect
@@ -10,6 +11,5 @@ VBoxContainer
 CanvasLayer
 CanvasGroup
 RichTextLabel
-MarginContainer
 Camera2D
 Sprite2D

@@ -62,9 +62,9 @@ grow_vertical = 2
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2"]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("1_xnxhg")
-theme_override_font_sizes/normal_font_size = 39
+theme_override_font_sizes/normal_font_size = 80
 bbcode_enabled = true
-text = "wWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWAAAA"
+text = "[center][wave amp=60.0 freq=5.0 connected=1]BSDC Tour[/wave]"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
 layout_mode = 2
@@ -77,3 +77,54 @@ size_flags_vertical = 10
 theme_override_fonts/font = ExtResource("1_xnxhg")
 text = "ENTER NOW WAAHHHH"
 script = ExtResource("3_qihfn")
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 1
+offset_left = 9.0
+offset_top = 11.0
+offset_right = 412.0
+offset_bottom = 599.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer3"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("1_xnxhg")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "extends Node
+class_name MouseInput
+
+var relative : Vector2
+var scrollFwd : int
+var scrollBck : int
+
+var lastFrame : float
+var lastMouseMove : float
+var lastScrollF : float
+var lastScrollB : float
+
+func _process(delta):
+	
+	if lastMouseMove < lastFrame:
+		relative = Vector2.ZERO
+	
+	if lastScrollF < lastFrame:
+		scrollFwd = 0;
+	
+	if lastScrollB < lastFrame:
+		scrollBck = 0
+	
+	lastFrame += delta
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		lastMouseMove = lastFrame
+		relative = event.relative
+	elif event is InputEventMouseButton:
+		if event.button_index == 4:
+			lastScrollF = lastFrame
+			scrollFwd = 1
+		elif event.button_index == 5:
+			lastScrollB = lastFrame
+			scrollBck = 1
+"
+metadata/_edit_lock_ = true
