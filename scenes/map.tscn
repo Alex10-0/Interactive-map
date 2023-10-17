@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://daq3v5sp5m0wn"]
+[gd_scene load_steps=18 format=3 uid="uid://daq3v5sp5m0wn"]
 
 [ext_resource type="Texture2D" uid="uid://c8oo1e1b3ojnb" path="res://images/FakeShit.png" id="1_xit1h"]
 [ext_resource type="Script" path="res://scenes/Camera2D.gd" id="2_l14ax"]
@@ -7,12 +7,32 @@
 [ext_resource type="PackedScene" uid="uid://ddfvhntkkvmrk" path="res://scenes/infoscreen.tscn" id="4_xjmc8"]
 [ext_resource type="Script" path="res://scenes/Node2D.gd" id="5_gw8ij"]
 [ext_resource type="Texture2D" uid="uid://bcvmulc35vs6t" path="res://images/menu.png" id="5_l75np"]
+[ext_resource type="Texture2D" uid="uid://rbuw1y4wsipp" path="res://images/menuPiss.png" id="8_6rg21"]
+[ext_resource type="Texture2D" uid="uid://c5u33pm4lnno4" path="res://images/menuBlue.png" id="9_1bkjp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vxcj"]
 size = Vector2(163, 108)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qqvuy"]
 size = Vector2(235, 131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywvye"]
+size = Vector2(337, 394)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bw0n"]
+size = Vector2(237, 149)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ocva"]
+size = Vector2(112, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpk3d"]
+size = Vector2(147, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25edx"]
+size = Vector2(149, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qvpl"]
+size = Vector2(132, 61)
 
 [node name="Node2D" type="Node2D"]
 
@@ -97,9 +117,11 @@ metadata/_edit_lock_ = true
 
 [node name="entrance" type="Node2D" parent="Node2D2"]
 script = ExtResource("5_gw8ij")
+metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="Node2D2/entrance"]
 position = Vector2(-139, 410)
+metadata/_edit_lock_ = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/entrance/Area2D"]
 offset_left = -118.0
@@ -123,9 +145,11 @@ metadata/_edit_lock_ = true
 [node name="reception" type="Node2D" parent="Node2D2"]
 position = Vector2(56, -176)
 script = ExtResource("5_gw8ij")
+metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="Node2D2/reception"]
 position = Vector2(-135, 278)
+metadata/_edit_lock_ = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/reception/Area2D"]
 offset_left = -81.0
@@ -140,10 +164,161 @@ patch_margin_top = 5
 patch_margin_right = 6
 patch_margin_bottom = 5
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/reception/Area2D"]
 position = Vector2(0.5, -2)
 shape = SubResource("RectangleShape2D_3vxcj")
+metadata/_edit_lock_ = true
+
+[node name="infoCentre" type="Node2D" parent="Node2D2"]
+script = ExtResource("5_gw8ij")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="Node2D2/infoCentre"]
+position = Vector2(-437, -119)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/infoCentre/Area2D"]
+position = Vector2(56.5, 135)
+shape = SubResource("RectangleShape2D_ywvye")
+metadata/_edit_lock_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/infoCentre/Area2D"]
+offset_left = -117.0
+offset_top = -66.0
+offset_right = 226.0
+offset_bottom = 351.0
+texture = ExtResource("5_l75np")
+draw_center = false
+region_rect = Rect2(0, 0, 50, 50)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+metadata/_edit_lock_ = true
+
+[node name="theatre" type="Node2D" parent="Node2D2"]
+script = ExtResource("5_gw8ij")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="Node2D2/theatre"]
+position = Vector2(36, -155)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/theatre/Area2D"]
+position = Vector2(6.5, 12.5)
+shape = SubResource("RectangleShape2D_8bw0n")
+metadata/_edit_lock_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/theatre/Area2D"]
+offset_left = -116.0
+offset_top = -68.0
+offset_right = 128.0
+offset_bottom = 90.0
+texture = ExtResource("5_l75np")
+draw_center = false
+region_rect = Rect2(0, 0, 50, 50)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+metadata/_edit_lock_ = true
+
+[node name="firstAid" type="Node2D" parent="Node2D2"]
+script = ExtResource("5_gw8ij")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="Node2D2/firstAid"]
+position = Vector2(179, 211)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/firstAid/Area2D"]
+position = Vector2(26, -21)
+shape = SubResource("RectangleShape2D_2ocva")
+metadata/_edit_lock_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/firstAid/Area2D"]
+offset_left = -32.0
+offset_top = -57.0
+offset_right = 82.0
+offset_bottom = 16.0
+texture = ExtResource("5_l75np")
+draw_center = false
+region_rect = Rect2(0, 0, 50, 50)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+metadata/_edit_lock_ = true
+
+[node name="stairsToF1" type="Node2D" parent="Node2D2"]
+script = ExtResource("5_gw8ij")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="Node2D2/stairsToF1"]
+position = Vector2(179, 211)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/stairsToF1/Area2D"]
+position = Vector2(72.5, -107)
+shape = SubResource("RectangleShape2D_cpk3d")
+metadata/_edit_lock_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/stairsToF1/Area2D"]
+offset_left = -3.0
+offset_top = -157.0
+offset_right = 147.0
+offset_bottom = -52.0
+texture = ExtResource("8_6rg21")
+draw_center = false
+region_rect = Rect2(0, 0, 50, 50)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+metadata/_edit_lock_ = true
+
+[node name="bathroom" type="Node2D" parent="Node2D2"]
+script = ExtResource("5_gw8ij")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="Node2D2/bathroom"]
+position = Vector2(180, 141)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/bathroom/Area2D"]
+position = Vector2(71.5, -124)
+shape = SubResource("RectangleShape2D_25edx")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/bathroom/Area2D"]
+offset_left = -3.0
+offset_top = -160.0
+offset_right = 146.0
+offset_bottom = -82.0
+texture = ExtResource("9_1bkjp")
+draw_center = false
+region_rect = Rect2(0, 0, 50, 50)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Node2D2/bathroom/Area2D"]
+offset_left = -246.0
+offset_top = -159.0
+offset_right = -114.0
+offset_bottom = -90.0
+texture = ExtResource("9_1bkjp")
+draw_center = false
+region_rect = Rect2(0, 0, 50, 50)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D2/bathroom/Area2D"]
+position = Vector2(-180, -127.5)
+shape = SubResource("RectangleShape2D_3qvpl")
 
 [connection signal="mouse_entered" from="Node2D2/gates/Area2D" to="Node2D2/gates" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Node2D2/gates/Area2D" to="Node2D2/gates" method="_on_area_2d_mouse_exited"]
@@ -151,3 +326,13 @@ shape = SubResource("RectangleShape2D_3vxcj")
 [connection signal="mouse_exited" from="Node2D2/entrance/Area2D" to="Node2D2/entrance" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="Node2D2/reception/Area2D" to="Node2D2/reception" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Node2D2/reception/Area2D" to="Node2D2/reception" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D2/infoCentre/Area2D" to="Node2D2/infoCentre" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D2/infoCentre/Area2D" to="Node2D2/infoCentre" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D2/theatre/Area2D" to="Node2D2/theatre" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D2/theatre/Area2D" to="Node2D2/theatre" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D2/firstAid/Area2D" to="Node2D2/firstAid" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D2/firstAid/Area2D" to="Node2D2/firstAid" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D2/stairsToF1/Area2D" to="Node2D2/stairsToF1" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D2/stairsToF1/Area2D" to="Node2D2/stairsToF1" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D2/bathroom/Area2D" to="Node2D2/bathroom" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D2/bathroom/Area2D" to="Node2D2/bathroom" method="_on_area_2d_mouse_exited"]
