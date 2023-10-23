@@ -39,6 +39,7 @@ func _process(delta):
 	
 	
 	match selectedImage:
+		#GROUND FLOOR ------------------------------------------------------------
 		entrance:
 			description.bbcode_text = "[center]The entrance to the college, this is the main way to access the building."
 			placeName.bbcode_text = "[center]Entrance"
@@ -51,6 +52,7 @@ func _process(delta):
 		reception:
 			description.bbcode_text = "The reception of BSDC, here you can ask questions to the receptioners and they will attempt to guide you accordingly."
 			placeName.bbcode_text = "Gates"
+		#FLOOR 1 -----------------------------------------------------------------
 		f1_classroom_1:
 			description.bbcode_text = "test"
 			placeName.bbcode_text = "balls"

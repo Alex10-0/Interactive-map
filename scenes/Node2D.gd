@@ -16,7 +16,7 @@ func _process(delta):
 	
 	
 	clickTimer = clamp(0, clickTimer, 1)
-	transparency = clamp(0.05, transparency, 1)
+	transparency = clamp(0.15, transparency, 1)
 	backTimer = clamp(0, backTimer, 1)
 	modulate.a = transparency
 	
@@ -54,9 +54,9 @@ func _process(delta):
 	
 	
 	if  Input.is_action_just_released("click") and hovering == true and moving == false and canExit == true:
-		if get_name() == "stairsToF1":
+		if get_name() == "stairstof1":
 			get_tree().change_scene_to_file("res://scenes/floor1.tscn")
-		if get_name() == "stairsToG":
+		if get_name() == "stairstog":
 			get_tree().change_scene_to_file("res://scenes/map.tscn")
 		else:
 			infoScreen.state = 1

@@ -1,5 +1,5 @@
-CollisionShape2D
 NinePatchRect
+CollisionShape2D
 MarginContainer
 AnimationPlayer
 AnimatedSprite2D

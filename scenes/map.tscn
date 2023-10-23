@@ -38,15 +38,15 @@ size = Vector2(132, 61)
 
 [node name="FakeShit-export" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(250.5, -339.5)
+position = Vector2(1334.97, -340.01)
 scale = Vector2(2.71167, 2.71167)
 texture = ExtResource("1_xit1h")
-metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("2_l14ax")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 2
@@ -252,20 +252,20 @@ patch_margin_right = 5
 patch_margin_bottom = 5
 metadata/_edit_lock_ = true
 
-[node name="stairsToF1" type="Node2D" parent="Node2D2"]
+[node name="stairstof1" type="Node2D" parent="Node2D2"]
 script = ExtResource("5_gw8ij")
 metadata/_edit_lock_ = true
 
-[node name="Area2D" type="Area2D" parent="Node2D2/stairsToF1"]
+[node name="Area2D" type="Area2D" parent="Node2D2/stairstof1"]
 position = Vector2(179, 211)
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/stairsToF1/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/stairstof1/Area2D"]
 position = Vector2(72.5, -107)
 shape = SubResource("RectangleShape2D_cpk3d")
 metadata/_edit_lock_ = true
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/stairsToF1/Area2D"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/stairstof1/Area2D"]
 offset_left = -3.0
 offset_top = -157.0
 offset_right = 147.0
@@ -332,7 +332,7 @@ shape = SubResource("RectangleShape2D_3qvpl")
 [connection signal="mouse_exited" from="Node2D2/theatre/Area2D" to="Node2D2/theatre" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="Node2D2/firstAid/Area2D" to="Node2D2/firstAid" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Node2D2/firstAid/Area2D" to="Node2D2/firstAid" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="Node2D2/stairsToF1/Area2D" to="Node2D2/stairsToF1" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Node2D2/stairsToF1/Area2D" to="Node2D2/stairsToF1" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Node2D2/stairstof1/Area2D" to="Node2D2/stairstof1" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Node2D2/stairstof1/Area2D" to="Node2D2/stairstof1" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="Node2D2/bathroom/Area2D" to="Node2D2/bathroom" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Node2D2/bathroom/Area2D" to="Node2D2/bathroom" method="_on_area_2d_mouse_exited"]
