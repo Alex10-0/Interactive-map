@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://btop3iedxl8dm"]
+[gd_scene load_steps=18 format=3 uid="uid://btop3iedxl8dm"]
 
 [ext_resource type="Texture2D" uid="uid://l5b8fap6umfs" path="res://images/floor3.png" id="1_vo74t"]
 [ext_resource type="Script" path="res://scenes/Camera2D.gd" id="2_am61g"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ddfvhntkkvmrk" path="res://scenes/infoscreen.tscn" id="5_tqokp"]
 [ext_resource type="Script" path="res://scenes/Node2D.gd" id="6_fgadu"]
 [ext_resource type="Texture2D" uid="uid://bcvmulc35vs6t" path="res://images/menu.png" id="7_3376j"]
+[ext_resource type="Texture2D" uid="uid://dumcbtxqas5jm" path="res://images/menuDown.png" id="7_c3h7f"]
 [ext_resource type="Texture2D" uid="uid://rbuw1y4wsipp" path="res://images/menuPiss.png" id="8_tc4ng"]
 [ext_resource type="Texture2D" uid="uid://c5u33pm4lnno4" path="res://images/menuBlue.png" id="9_h836p"]
 
@@ -19,11 +20,11 @@ size = Vector2(91, 58)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ual5n"]
 size = Vector2(311.563, 138)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8trt"]
-size = Vector2(616, 156)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fiha"]
 size = Vector2(620, 150)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8trt"]
+size = Vector2(616, 156)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xeo24"]
 size = Vector2(304.563, 132)
@@ -35,17 +36,15 @@ size = Vector2(304.563, 156)
 
 [node name="FakeShit-export" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1056, -589)
+position = Vector2(1342, -670)
 scale = Vector2(2.71167, 2.71167)
 texture = ExtResource("1_vo74t")
-metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("2_am61g")
 metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 2
@@ -65,7 +64,7 @@ metadata/_edit_lock_ = true
 [node name="Button" type="Button" parent="CanvasLayer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_4n4ut")
-text = "Back To Title"
+text = "Back to Title"
 script = ExtResource("4_awhpv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
@@ -85,6 +84,7 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(286, -81)
 
 [node name="stairstof2" type="Node2D" parent="Node2D2"]
 script = ExtResource("6_fgadu")
@@ -100,11 +100,10 @@ shape = SubResource("RectangleShape2D_rou81")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/stairstof2/Area2D"]
 offset_left = -565.0
-offset_top = -148.0
+offset_top = -149.0
 offset_right = -481.0
 offset_bottom = -109.0
-texture = ExtResource("8_tc4ng")
-draw_center = false
+texture = ExtResource("7_c3h7f")
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -129,7 +128,6 @@ offset_top = -182.0
 offset_right = -481.0
 offset_bottom = -144.0
 texture = ExtResource("8_tc4ng")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -153,7 +151,6 @@ offset_top = -101.0
 offset_right = -350.0
 offset_bottom = -38.0
 texture = ExtResource("9_h836p")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -178,7 +175,6 @@ offset_top = -361.0
 offset_right = -560.0
 offset_bottom = -228.0
 texture = ExtResource("7_3376j")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -203,32 +199,6 @@ offset_top = -195.0
 offset_right = -560.0
 offset_bottom = -54.0
 texture = ExtResource("7_3376j")
-draw_center = false
-region_rect = Rect2(0, 0, 50, 50)
-patch_margin_left = 5
-patch_margin_top = 5
-patch_margin_right = 5
-patch_margin_bottom = 5
-
-[node name="f3_classroom_2_down" type="Node2D" parent="Node2D2"]
-script = ExtResource("6_fgadu")
-metadata/_edit_lock_ = true
-
-[node name="Area2D" type="Area2D" parent="Node2D2/f3_classroom_2_down"]
-position = Vector2(179, 211)
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/f3_classroom_2_down/Area2D"]
-position = Vector2(-42, -138)
-shape = SubResource("RectangleShape2D_i8trt")
-
-[node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/f3_classroom_2_down/Area2D"]
-offset_left = -355.0
-offset_top = -220.0
-offset_right = 270.0
-offset_bottom = -57.0
-texture = ExtResource("7_3376j")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -253,7 +223,30 @@ offset_top = -421.0
 offset_right = 270.0
 offset_bottom = -263.0
 texture = ExtResource("7_3376j")
-draw_center = false
+region_rect = Rect2(0, 0, 50, 50)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="f3_classroom_2_down" type="Node2D" parent="Node2D2"]
+script = ExtResource("6_fgadu")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="Node2D2/f3_classroom_2_down"]
+position = Vector2(179, 211)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/f3_classroom_2_down/Area2D"]
+position = Vector2(-42, -138)
+shape = SubResource("RectangleShape2D_i8trt")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/f3_classroom_2_down/Area2D"]
+offset_left = -355.0
+offset_top = -220.0
+offset_right = 270.0
+offset_bottom = -57.0
+texture = ExtResource("7_3376j")
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -278,7 +271,6 @@ offset_top = -398.0
 offset_right = 788.0
 offset_bottom = -263.0
 texture = ExtResource("7_3376j")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -303,7 +295,6 @@ offset_top = -216.0
 offset_right = 788.0
 offset_bottom = -57.0
 texture = ExtResource("7_3376j")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -320,10 +311,10 @@ patch_margin_bottom = 5
 [connection signal="mouse_exited" from="Node2D2/f3_classroom_1_up/Area2D" to="Node2D2/f3_classroom_1_up" method="_on_area_2d_mouse_exited" flags=18]
 [connection signal="mouse_entered" from="Node2D2/f3_classroom_1_down/Area2D" to="Node2D2/f3_classroom_1_down" method="_on_area_2d_mouse_entered" flags=18]
 [connection signal="mouse_exited" from="Node2D2/f3_classroom_1_down/Area2D" to="Node2D2/f3_classroom_1_down" method="_on_area_2d_mouse_exited" flags=18]
-[connection signal="mouse_entered" from="Node2D2/f3_classroom_2_down/Area2D" to="Node2D2/f3_classroom_2_down" method="_on_area_2d_mouse_entered" flags=18]
-[connection signal="mouse_exited" from="Node2D2/f3_classroom_2_down/Area2D" to="Node2D2/f3_classroom_2_down" method="_on_area_2d_mouse_exited" flags=18]
 [connection signal="mouse_entered" from="Node2D2/f3_classroom_2_up/Area2D" to="Node2D2/f3_classroom_2_up" method="_on_area_2d_mouse_entered" flags=18]
 [connection signal="mouse_exited" from="Node2D2/f3_classroom_2_up/Area2D" to="Node2D2/f3_classroom_2_up" method="_on_area_2d_mouse_exited" flags=18]
+[connection signal="mouse_entered" from="Node2D2/f3_classroom_2_down/Area2D" to="Node2D2/f3_classroom_2_down" method="_on_area_2d_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Node2D2/f3_classroom_2_down/Area2D" to="Node2D2/f3_classroom_2_down" method="_on_area_2d_mouse_exited" flags=18]
 [connection signal="mouse_entered" from="Node2D2/f3_classroom_3_up/Area2D" to="Node2D2/f3_classroom_3_up" method="_on_area_2d_mouse_entered" flags=18]
 [connection signal="mouse_exited" from="Node2D2/f3_classroom_3_up/Area2D" to="Node2D2/f3_classroom_3_up" method="_on_area_2d_mouse_exited" flags=18]
 [connection signal="mouse_entered" from="Node2D2/f3_classroom_3_down/Area2D" to="Node2D2/f3_classroom_3_down" method="_on_area_2d_mouse_entered" flags=18]

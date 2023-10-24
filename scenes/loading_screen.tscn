@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbn6w12pir0e6"]
+
+[ext_resource type="Script" path="res://scenes/loading_screen.gd" id="1_rn8kr"]
+[ext_resource type="FontFile" uid="uid://c408u3xjkxfuh" path="res://sources/fonts/dos/BlockZone.ttf" id="2_tj3xp"]
+
+[node name="loadingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rn8kr")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.0
+offset_top = -97.0
+offset_right = 267.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_tj3xp")
+theme_override_font_sizes/font_size = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_tj3xp")
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[center][wave amp=60.0 freq=5.0 connected=1][color=#00FF11]Loading...[/color][/wave]"

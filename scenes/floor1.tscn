@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c6k3om1bi8ovc"]
+[gd_scene load_steps=21 format=3 uid="uid://c6k3om1bi8ovc"]
 
 [ext_resource type="Texture2D" uid="uid://blfxvw7wpw2gf" path="res://images/floor1.png" id="1_rwb70"]
 [ext_resource type="Script" path="res://scenes/Camera2D.gd" id="2_ygh8f"]
@@ -8,10 +8,11 @@
 [ext_resource type="Script" path="res://scenes/Node2D.gd" id="6_wjwrf"]
 [ext_resource type="Texture2D" uid="uid://bcvmulc35vs6t" path="res://images/menu.png" id="7_epmr3"]
 [ext_resource type="Texture2D" uid="uid://rbuw1y4wsipp" path="res://images/menuPiss.png" id="8_6rmg3"]
+[ext_resource type="Texture2D" uid="uid://dumcbtxqas5jm" path="res://images/menuDown.png" id="8_ekhb5"]
 [ext_resource type="Texture2D" uid="uid://c5u33pm4lnno4" path="res://images/menuBlue.png" id="9_3adqs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuj7v"]
-size = Vector2(82, 84)
+size = Vector2(82, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gsdre"]
 size = Vector2(110, 75)
@@ -45,17 +46,15 @@ metadata/_edit_lock_ = true
 
 [node name="FakeShit-export" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(104, 95)
+position = Vector2(62, 66)
 scale = Vector2(2.71167, 2.71167)
 texture = ExtResource("1_rwb70")
-metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("2_ygh8f")
 metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 2
@@ -75,7 +74,7 @@ metadata/_edit_lock_ = true
 [node name="Button" type="Button" parent="CanvasLayer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_piavh")
-text = "Back To Title"
+text = "Back to Title"
 script = ExtResource("4_lkj7t")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
@@ -95,7 +94,7 @@ grow_vertical = 2
 layout_mode = 2
 
 [node name="Node2D2" type="Node2D" parent="."]
-metadata/_edit_lock_ = true
+position = Vector2(-42, -29)
 
 [node name="stairstof2" type="Node2D" parent="Node2D2"]
 script = ExtResource("6_wjwrf")
@@ -106,16 +105,15 @@ position = Vector2(179, 211)
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/stairstof2/Area2D"]
-position = Vector2(-190, -205)
+position = Vector2(-190, -226)
 shape = SubResource("RectangleShape2D_tuj7v")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/stairstof2/Area2D"]
 offset_left = -234.0
 offset_top = -249.0
 offset_right = -149.0
-offset_bottom = -159.0
+offset_bottom = -203.0
 texture = ExtResource("8_6rmg3")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -139,8 +137,7 @@ offset_left = -557.0
 offset_top = -49.0
 offset_right = -441.0
 offset_bottom = 30.0
-texture = ExtResource("8_6rmg3")
-draw_center = false
+texture = ExtResource("8_ekhb5")
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -165,7 +162,6 @@ offset_top = -238.0
 offset_right = -943.0
 offset_bottom = 158.0
 texture = ExtResource("7_epmr3")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -190,7 +186,6 @@ offset_top = -257.0
 offset_right = -230.0
 offset_bottom = -114.0
 texture = ExtResource("7_epmr3")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -214,7 +209,6 @@ offset_top = -160.0
 offset_right = -6.0
 offset_bottom = -89.0
 texture = ExtResource("9_3adqs")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -231,7 +225,6 @@ offset_top = -78.0
 offset_right = -648.0
 offset_bottom = 35.0
 texture = ExtResource("9_3adqs")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -256,7 +249,6 @@ offset_top = -499.0
 offset_right = 632.0
 offset_bottom = -327.0
 texture = ExtResource("7_epmr3")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -281,7 +273,6 @@ offset_top = -281.0
 offset_right = 630.0
 offset_bottom = -110.0
 texture = ExtResource("7_epmr3")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -306,7 +297,6 @@ offset_top = -279.0
 offset_right = 1177.0
 offset_bottom = -107.0
 texture = ExtResource("7_epmr3")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -331,7 +321,6 @@ offset_top = -471.0
 offset_right = 1178.0
 offset_bottom = -328.0
 texture = ExtResource("7_epmr3")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5

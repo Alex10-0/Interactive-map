@@ -54,6 +54,12 @@ func _process(delta):
 	
 	
 	if  Input.is_action_just_released("click") and hovering == true and moving == false and canExit == true:
+		if get_name() == "stairstof4":
+			get_tree().change_scene_to_file("res://scenes/floor4.tscn")
+		if get_name() == "stairstof3":
+			get_tree().change_scene_to_file("res://scenes/floor3.tscn")
+		if get_name() == "stairstof2":
+			get_tree().change_scene_to_file("res://scenes/floor2.tscn")
 		if get_name() == "stairstof1":
 			get_tree().change_scene_to_file("res://scenes/floor1.tscn")
 		if get_name() == "stairstog":

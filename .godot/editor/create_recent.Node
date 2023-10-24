@@ -1,6 +1,8 @@
+RichTextLabel
+MarginContainer
+ProgressBar
 NinePatchRect
 CollisionShape2D
-MarginContainer
 AnimationPlayer
 AnimatedSprite2D
 Node2D
@@ -10,6 +12,5 @@ Button
 VBoxContainer
 CanvasLayer
 CanvasGroup
-RichTextLabel
 Camera2D
 Sprite2D

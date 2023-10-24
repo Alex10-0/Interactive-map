@@ -25,8 +25,8 @@ size = Vector2(237, 149)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ocva"]
 size = Vector2(112, 70)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpk3d"]
-size = Vector2(147, 94)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcge5"]
+size = Vector2(79, 88)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25edx"]
 size = Vector2(149, 70)
@@ -41,12 +41,12 @@ texture_filter = 1
 position = Vector2(1334.97, -340.01)
 scale = Vector2(2.71167, 2.71167)
 texture = ExtResource("1_xit1h")
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("2_l14ax")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 2
@@ -66,7 +66,7 @@ metadata/_edit_lock_ = true
 [node name="Button" type="Button" parent="CanvasLayer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_r8lhh")
-text = "Back"
+text = "Back to Title"
 script = ExtResource("3_5h7ud")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
@@ -101,7 +101,6 @@ offset_top = -56.0
 offset_right = 82.0
 offset_bottom = 52.0
 texture = ExtResource("5_l75np")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -129,7 +128,6 @@ offset_top = -66.0
 offset_right = 119.0
 offset_bottom = 67.0
 texture = ExtResource("5_l75np")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -157,7 +155,6 @@ offset_top = -56.0
 offset_right = 82.0
 offset_bottom = 52.0
 texture = ExtResource("5_l75np")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -190,7 +187,6 @@ offset_top = -66.0
 offset_right = 226.0
 offset_bottom = 351.0
 texture = ExtResource("5_l75np")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -217,7 +213,6 @@ offset_top = -68.0
 offset_right = 128.0
 offset_bottom = 90.0
 texture = ExtResource("5_l75np")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -244,7 +239,6 @@ offset_top = -57.0
 offset_right = 82.0
 offset_bottom = 16.0
 texture = ExtResource("5_l75np")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -261,23 +255,20 @@ position = Vector2(179, 211)
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/stairstof1/Area2D"]
-position = Vector2(72.5, -107)
-shape = SubResource("RectangleShape2D_cpk3d")
-metadata/_edit_lock_ = true
+position = Vector2(106.5, -104)
+shape = SubResource("RectangleShape2D_dcge5")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Node2D2/stairstof1/Area2D"]
-offset_left = -3.0
+offset_left = 65.0
 offset_top = -157.0
 offset_right = 147.0
 offset_bottom = -52.0
 texture = ExtResource("8_6rg21")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
-metadata/_edit_lock_ = true
 
 [node name="bathroom" type="Node2D" parent="Node2D2"]
 script = ExtResource("5_gw8ij")
@@ -296,7 +287,6 @@ offset_top = -160.0
 offset_right = 146.0
 offset_bottom = -82.0
 texture = ExtResource("9_1bkjp")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5
@@ -309,7 +299,6 @@ offset_top = -159.0
 offset_right = -114.0
 offset_bottom = -90.0
 texture = ExtResource("9_1bkjp")
-draw_center = false
 region_rect = Rect2(0, 0, 50, 50)
 patch_margin_left = 5
 patch_margin_top = 5

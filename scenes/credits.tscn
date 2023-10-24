@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dr4fpgek3yxv6"]
+[gd_scene load_steps=3 format=3 uid="uid://dr4fpgek3yxv6"]
 
-[ext_resource type="FontFile" uid="uid://mt81q5eklb4i" path="res://sources/fonts/CourierPrime-Regular.ttf" id="1_qaa27"]
-[ext_resource type="Script" path="res://Scripts/Buttons/Back.gd" id="2_0xfuq"]
 [ext_resource type="FontFile" uid="uid://c408u3xjkxfuh" path="res://sources/fonts/dos/BlockZone.ttf" id="2_uc4mo"]
+[ext_resource type="Script" path="res://scenes/back2menubutbetter.gd" id="3_wjonp"]
 
 [node name="credits" type="Control"]
 layout_mode = 3
@@ -26,7 +25,7 @@ grow_horizontal = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("1_qaa27")
+theme_override_fonts/normal_font = ExtResource("2_uc4mo")
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
 text = "[center][wave amp=50.0 freq=5.0 connected=1]Credits![/wave]
@@ -56,4 +55,4 @@ metadata/_edit_lock_ = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_uc4mo")
 text = "Back"
-script = ExtResource("2_0xfuq")
+script = ExtResource("3_wjonp")

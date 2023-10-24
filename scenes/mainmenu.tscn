@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d28t8el8xfspt"]
+[gd_scene load_steps=5 format=3 uid="uid://d28t8el8xfspt"]
 
 [ext_resource type="Script" path="res://Scripts/Buttons/CreditsButton.gd" id="1_hqdqb"]
 [ext_resource type="FontFile" uid="uid://c408u3xjkxfuh" path="res://sources/fonts/dos/BlockZone.ttf" id="1_xnxhg"]
 [ext_resource type="Script" path="res://scenes/Start.gd" id="3_qihfn"]
+[ext_resource type="Texture2D" uid="uid://c1jjkt3kap3mh" path="res://images/line.png" id="4_ofmgd"]
 
 [node name="Main Menu" type="Control"]
 layout_mode = 3
@@ -64,10 +65,12 @@ layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("1_xnxhg")
 theme_override_font_sizes/normal_font_size = 80
 bbcode_enabled = true
-text = "[center][wave amp=60.0 freq=5.0 connected=1]BSDC Tour[/wave]"
+text = "[center][wave amp=60.0 freq=5.0 connected=1][color=#00FF11]BSDC Tour[/color][/wave]"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
 theme_override_constants/separation = 10
 
 [node name="Button" type="Button" parent="MarginContainer2/VBoxContainer"]
@@ -78,7 +81,13 @@ theme_override_fonts/font = ExtResource("1_xnxhg")
 text = "ENTER NOW WAAHHHH"
 script = ExtResource("3_qihfn")
 
+[node name="Line" type="Sprite2D" parent="MarginContainer2"]
+position = Vector2(237, 73)
+scale = Vector2(39.5, 2.24996)
+texture = ExtResource("4_ofmgd")
+
 [node name="MarginContainer3" type="MarginContainer" parent="."]
+visible = false
 layout_mode = 1
 offset_left = 9.0
 offset_top = 11.0
